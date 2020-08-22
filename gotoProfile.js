@@ -11,7 +11,7 @@ if(tripleDot.length==0)
 {
 
   console.log("new UI")
-  var dropdown = document.getElementsByClassName("hu5pjgll lzf7d6o1 sp_-69RjdrrvoB_1_5x sx_683aac")
+  var dropdown = document.getElementsByClassName("hu5pjgll lzf7d6o1 sp_LYAc5k-1MU4_1_5x sx_6da5ac")
   console.log(dropdown);
   let i =0;
   dropdown[0].click()
@@ -39,15 +39,16 @@ if(tripleDot.length==0)
              for(let unfollowbtnmenu of unfollowbtn)
              {
                console.log(unfollowbtnmenu.innerHTML)
-               if(unfollowbtnmenu.innerHTML =="Reconnect with people, pages, and groups you unfollowed.")
+               if(unfollowbtnmenu.innerHTML =="Unfollow people, pages, and groups to hide their posts")
                {
                  //Unfollow people, pages, and groups to hide their posts
                  //Reconnect with people, pages, and groups you unfollowed.
+                 
                  //oajrlxb2 tdjehn4e qu0x051f esr5mh6w e9989ue4 r7d6kgcz rq0escxv nhd2j8a9 j83agx80 p7hjln8o kvgmc6g5 cxmmr5t8 oygrvhab hcukyx3x jb3vyjys rz4wbd8a qt6c0cv9 a8nywdso i1ao9s8h esuyzwwr f1sip0of lzcic4wl l9j0dhe7 abiwlrkh p8dawk7l bp9cbjyn s45kfl79 emlxlaya bkmhp75w spb7xbtv rt8b4zig n8ej3o3l agehan2d sk4xxmp2 taijpn5t tv7at329 thwo4zme
                  console.log("match")
                unfollowbtnmenu.click();
                var scrollerNewUi = function (className) {
-                let unfollowclicknewui = document.getElementsByClassName("hu5pjgll lzf7d6o1 sp_Iul-suA8MQL_1_5x sx_f9d2dc")
+                let unfollowclicknewui = document.getElementsByClassName("hu5pjgll op6gxeva sp_goeHjAlsAx-_1_5x sx_58f0be")
                 console.log(unfollowclicknewui);
                 for(let unfollowclicknewui1 of unfollowclicknewui )
                 {
