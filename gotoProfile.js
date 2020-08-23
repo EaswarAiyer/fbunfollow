@@ -11,35 +11,43 @@ if(tripleDot.length==0)
 {
 
   console.log("new UI")
-  var dropdown = document.getElementsByClassName("hu5pjgll lzf7d6o1 sp_LYAc5k-1MU4_1_5x sx_6da5ac")
+  var dropdown = document.getElementsByClassName("hu5pjgll lzf7d6o1 sp_LYAc5k-1MU4_2x sx_dde2ff")
   console.log(dropdown);
   let i =0;
   dropdown[0].click()
   setTimeout(()=>{
    var settings= document.getElementsByClassName("oi732d6d ik7dh3pa d2edcug0 qv66sw1b c1et5uql a8c37x1j muag1w35 enqfppq2 jq4qci2q a3bd9o3v ekzkrbhg oo9gr5id hzawbc8m")
     console.log(settings);
+    console.log("Going to iterate settings class")
     for(let settingsmenu of settings)
     {
       console.log(settingsmenu.innerHTML)
-      if(settingsmenu.innerHTML =="Settings &amp; Privacy")
+      var settingsStr = "Settings &amp; privacy";
+      if(settingsmenu.innerHTML.toUpperCase() ==settingsStr.toUpperCase())
       {
+      console.log("inside settings and privacy")
       settingsmenu.click();
+      console.log("clicked settings and privacy")
       setTimeout(()=>{
         var newsfeed= document.getElementsByClassName("oi732d6d ik7dh3pa d2edcug0 qv66sw1b c1et5uql a8c37x1j muag1w35 enqfppq2 jq4qci2q a3bd9o3v ekzkrbhg oo9gr5id hzawbc8m")
          console.log(newsfeed);
+         console.log("Going to iterate newsfeed preferences class")
          for(let newsfeedmenu of newsfeed)
          {
            console.log(newsfeedmenu.innerHTML)
-           if(newsfeedmenu.innerHTML =="News Feed Preferences")
+           var newsFeedStr = "News Feed preferences";
+           if(newsfeedmenu.innerHTML.toUpperCase() == newsFeedStr.toUpperCase())
            {
            newsfeedmenu.click();
+           console.log("clicked news feed preferences")
            setTimeout(()=>{
             var unfollowbtn= document.getElementsByClassName("oi732d6d ik7dh3pa d2edcug0 qv66sw1b c1et5uql a8c37x1j muag1w35 enqfppq2 jq4qci2q a3bd9o3v knj5qynh m9osqain hzawbc8m")
              console.log(unfollowbtn);
              for(let unfollowbtnmenu of unfollowbtn)
              {
                console.log(unfollowbtnmenu.innerHTML)
-               if(unfollowbtnmenu.innerHTML =="Unfollow people, pages, and groups to hide their posts")
+               unfollowStr = "Unfollow people, Pages and groups to hide their posts";
+               if(unfollowbtnmenu.innerHTML.toUpperCase() == unfollowStr.toUpperCase())
                {
                  //Unfollow people, pages, and groups to hide their posts
                  //Reconnect with people, pages, and groups you unfollowed.
@@ -47,14 +55,15 @@ if(tripleDot.length==0)
                  //oajrlxb2 tdjehn4e qu0x051f esr5mh6w e9989ue4 r7d6kgcz rq0escxv nhd2j8a9 j83agx80 p7hjln8o kvgmc6g5 cxmmr5t8 oygrvhab hcukyx3x jb3vyjys rz4wbd8a qt6c0cv9 a8nywdso i1ao9s8h esuyzwwr f1sip0of lzcic4wl l9j0dhe7 abiwlrkh p8dawk7l bp9cbjyn s45kfl79 emlxlaya bkmhp75w spb7xbtv rt8b4zig n8ej3o3l agehan2d sk4xxmp2 taijpn5t tv7at329 thwo4zme
                  console.log("match")
                unfollowbtnmenu.click();
+               console.log("clicked unfollow button")
                var scrollerNewUi = function (className) {
-                let unfollowclicknewui = document.getElementsByClassName("hu5pjgll op6gxeva sp_goeHjAlsAx-_1_5x sx_58f0be")
-                console.log(unfollowclicknewui);
-                for(let unfollowclicknewui1 of unfollowclicknewui )
-                {
-                  console.log(unfollowclicknewui1.innerHTML)
-                  unfollowclicknewui1.click();
-                }
+                // let unfollowclicknewui = document.getElementsByClassName("hu5pjgll op6gxeva sp_goeHjAlsAx-_1_5x sx_58f0be")
+                // console.log(unfollowclicknewui);
+                // for(let unfollowclicknewui1 of unfollowclicknewui )
+                // {
+                //   console.log(unfollowclicknewui1.innerHTML)
+                //   unfollowclicknewui1.click();
+                // }
                 setTimeout(() => {
                   let scrollable = document.getElementsByClassName(
                     className
@@ -70,23 +79,54 @@ if(tripleDot.length==0)
                 }, 2000);
 
               };
+              var scrollerNewUiToTop = function (className)
+              {
+                setTimeout(() => {
+                  let scrollable = document.getElementsByClassName(
+                    className
+                  );
+                  console.log(scrollable)
+  
+                  for (let scroll1 of scrollable) {
+                    // console.log(scroll1);
+                    // console.log(scroll1.clientHeight);
+                    // scroll1.scrollTop = scroll1.scrollTop+scroll1.clientHeight;
+                    scroll1.scrollIntoView(true)
+                  }
+                }, 2000);
+
+              }
 
               var printFollowingnewui = function () {
                 setTimeout(() => {
-                  let followablesnewui = document.getElementsByClassName("oajrlxb2 oo1teu6h qu0x051f esr5mh6w e9989ue4 r7d6kgcz rq0escxv nhd2j8a9 j83agx80 p7hjln8o kvgmc6g5 cxmmr5t8 oygrvhab hcukyx3x jb3vyjys rz4wbd8a qt6c0cv9 a8nywdso i1ao9s8h esuyzwwr f1sip0of lzcic4wl l9j0dhe7 abiwlrkh p8dawk7l bp9cbjyn s45kfl79 emlxlaya bkmhp75w spb7xbtv rt8b4zig n8ej3o3l agehan2d sk4xxmp2 taijpn5t tv7at329 thwo4zme");
+                  //let followablesnewui = document.getElementById("oajrlxb2 oo1teu6h qu0x051f esr5mh6w e9989ue4 r7d6kgcz rq0escxv nhd2j8a9 j83agx80 p7hjln8o kvgmc6g5 cxmmr5t8 oygrvhab hcukyx3x jb3vyjys rz4wbd8a qt6c0cv9 a8nywdso i1ao9s8h esuyzwwr f1sip0of lzcic4wl l9j0dhe7 abiwlrkh p8dawk7l bp9cbjyn s45kfl79 emlxlaya bkmhp75w spb7xbtv rt8b4zig n8ej3o3l agehan2d sk4xxmp2 taijpn5t tv7at329 thwo4zme");
+                  let followablesnewui = document.querySelectorAll("[aria-label='Toggle to follow']")
                   console.log(followablesnewui);
                   if(lastfollowedcountnewui==followablesnewui.length)
                   {
                       equalcountnewui++
                       if(equalcountnewui==5){
                       console.log("Interval cleared........")
-                      
                       clearInterval(setintervalidnewui);
-                      for (let followed1 of followablesnewui) {
-                          //let nameLabel = followed1.getElementsByClassName("_5u3n");
-                          console.log(followed1.innerHTML);
-                         // followed1.click();
-                        }
+                      var x = 0; 
+                      var time = 500; 
+                      function amol(){ 
+                        console.log("printing x" + x)
+                        followablesnewui[x].click(); 
+                          if(++x < followablesnewui.length){ 
+                          setTimeout(amol, time); 
+                          } 
+                      } 
+                      let profileElements = document.getElementsByClassName("oajrlxb2 g5ia77u1 qu0x051f esr5mh6w e9989ue4 r7d6kgcz rq0escxv nhd2j8a9 nc684nl6 p7hjln8o kvgmc6g5 cxmmr5t8 oygrvhab hcukyx3x jb3vyjys rz4wbd8a qt6c0cv9 a8nywdso i1ao9s8h esuyzwwr f1sip0of lzcic4wl gmql0nx0 gpro0wi8 lrazzd5p")
+                      
+                      console.log("followables length" + followablesnewui.length)
+                      console.log("profile elements" +profileElements.length)
+                      amol();
+                      //for (let followed1 of followablesnewui) {
+                      //    let nameLabel = followed1.getElementsByClassName("oajrlxb2 oo1teu6h qu0x051f esr5mh6w e9989ue4 r7d6kgcz rq0escxv nhd2j8a9 j83agx80 p7hjln8o kvgmc6g5 cxmmr5t8 oygrvhab hcukyx3x jb3vyjys rz4wbd8a qt6c0cv9 a8nywdso i1ao9s8h esuyzwwr f1sip0of lzcic4wl l9j0dhe7 abiwlrkh p8dawk7l bp9cbjyn s45kfl79 emlxlaya bkmhp75w spb7xbtv rt8b4zig n8ej3o3l agehan2d sk4xxmp2 taijpn5t tv7at329 thwo4zme");
+                      //    console.log(followed1.innerHTML);
+                      //    followed1.click();
+                      //  }
                         // let unfollowclicknewui = document.getElementsByClassName("oajrlxb2 oo1teu6h qu0x051f esr5mh6w e9989ue4 r7d6kgcz rq0escxv nhd2j8a9 j83agx80 p7hjln8o kvgmc6g5 cxmmr5t8 oygrvhab hcukyx3x jb3vyjys rz4wbd8a qt6c0cv9 a8nywdso i1ao9s8h esuyzwwr f1sip0of lzcic4wl l9j0dhe7 abiwlrkh p8dawk7l bp9cbjyn s45kfl79 emlxlaya bkmhp75w spb7xbtv rt8b4zig n8ej3o3l agehan2d sk4xxmp2 taijpn5t tv7at329 thwo4zme")
                         //   console.log(unfollowclicknewui);
                         //   for(let unfollowclicknewui1 of unfollowclicknewui )
@@ -122,6 +162,7 @@ if(tripleDot.length==0)
                 printFollowingnewui();
                 
             },5000)
+
 
              
                break;
