@@ -140,7 +140,7 @@ chrome.storage.sync.set({"progbarval": 5}, function() {
                       });
                       clearInterval(setintervalidnewui);
                       var x = 0; 
-                      var time = 500; 
+                      var time = 1000; 
                       function amol(){ 
                         console.log("printing x" + x)
                         followablesnewui[x].click(); 
