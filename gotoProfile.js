@@ -28,8 +28,9 @@ chrome.storage.sync.set({"progbarval": 5}, function() {
   let i =0;
   dropdown[0].click()
   setTimeout(()=>{
-   var settings= document.getElementsByClassName("oi732d6d ik7dh3pa d2edcug0 qv66sw1b c1et5uql a8c37x1j muag1w35 enqfppq2 jq4qci2q a3bd9o3v ekzkrbhg oo9gr5id hzawbc8m")
-    console.log(settings);
+   //var settings= document.getElementsByClassName("oi732d6d ik7dh3pa d2edcug0 qv66sw1b c1et5uql a8c37x1j muag1w35 enqfppq2 jq4qci2q a3bd9o3v ekzkrbhg oo9gr5id hzawbc8m")
+   var settings= document.getElementsByTagName("span") 
+   console.log(settings);
     console.log("Going to iterate settings class")
     for(let settingsmenu of settings)
     {
@@ -44,8 +45,9 @@ chrome.storage.sync.set({"progbarval": 5}, function() {
       settingsmenu.click();
       console.log("clicked settings and privacy")
       setTimeout(()=>{
-        var newsfeed= document.getElementsByClassName("oi732d6d ik7dh3pa d2edcug0 qv66sw1b c1et5uql a8c37x1j muag1w35 enqfppq2 jq4qci2q a3bd9o3v ekzkrbhg oo9gr5id hzawbc8m")
-         console.log(newsfeed);
+        //var newsfeed= document.getElementsByClassName("oi732d6d ik7dh3pa d2edcug0 qv66sw1b c1et5uql a8c37x1j muag1w35 enqfppq2 jq4qci2q a3bd9o3v ekzkrbhg oo9gr5id hzawbc8m")
+        var newsfeed= document.getElementsByTagName("span") 
+        console.log(newsfeed);
          console.log("Going to iterate newsfeed preferences class")
          for(let newsfeedmenu of newsfeed)
          {
@@ -59,13 +61,15 @@ chrome.storage.sync.set({"progbarval": 5}, function() {
            newsfeedmenu.click();
            console.log("clicked news feed preferences")
            setTimeout(()=>{
-            var unfollowbtn= document.getElementsByClassName("oi732d6d ik7dh3pa d2edcug0 qv66sw1b c1et5uql a8c37x1j muag1w35 enqfppq2 jq4qci2q a3bd9o3v knj5qynh m9osqain hzawbc8m")
-             console.log(unfollowbtn);
+            //var unfollowbtn= document.getElementsByClassName("oi732d6d ik7dh3pa d2edcug0 qv66sw1b c1et5uql a8c37x1j muag1w35 enqfppq2 jq4qci2q a3bd9o3v knj5qynh m9osqain hzawbc8m")
+            var unfollowbtn= document.getElementsByTagName("span") 
+            console.log(unfollowbtn);
              for(let unfollowbtnmenu of unfollowbtn)
              {
                console.log(unfollowbtnmenu.innerHTML)
                unfollowStr = "Unfollow people, pages, and groups to hide their posts";
-               if(unfollowbtnmenu.innerHTML.toUpperCase() == unfollowStr.toUpperCase())
+               unfollowStr2 = "Unfollow people, Pages and groups to hide their posts"
+               if(unfollowbtnmenu.innerHTML.toUpperCase() == unfollowStr.toUpperCase() || unfollowbtnmenu.innerHTML.toUpperCase() == unfollowStr2.toUpperCase())
                {
                 chrome.storage.sync.set({"progbarval": 20}, function() {
                   console.log('Value is set to 20');
@@ -142,6 +146,15 @@ chrome.storage.sync.set({"progbarval": 5}, function() {
                         followablesnewui[x].click(); 
                           if(++x < followablesnewui.length){ 
                           setTimeout(amol, time); 
+                          }
+                          else
+                          { 
+                            chrome.storage.sync.set({"progbarval":100}, function() {
+                              console.log('Value is set to 100');
+                            });
+                            chrome.storage.sync.set({"progbartext":"Completed."}, function() {
+                              console.log('Value is set to unfollow');
+                            });
                           } 
                       } 
                       let profileElements = document.getElementsByClassName("oajrlxb2 g5ia77u1 qu0x051f esr5mh6w e9989ue4 r7d6kgcz rq0escxv nhd2j8a9 nc684nl6 p7hjln8o kvgmc6g5 cxmmr5t8 oygrvhab hcukyx3x jb3vyjys rz4wbd8a qt6c0cv9 a8nywdso i1ao9s8h esuyzwwr f1sip0of lzcic4wl gmql0nx0 gpro0wi8 lrazzd5p")
@@ -149,9 +162,8 @@ chrome.storage.sync.set({"progbarval": 5}, function() {
                       console.log("followables length" + followablesnewui.length)
                       console.log("profile elements" +profileElements.length)
                       amol();
-                      chrome.storage.sync.set({"progbarval":100}, function() {
-                        console.log('Value is set to 100');
-                      });
+                      
+                      
                       //for (let followed1 of followablesnewui) {
                       //    let nameLabel = followed1.getElementsByClassName("oajrlxb2 oo1teu6h qu0x051f esr5mh6w e9989ue4 r7d6kgcz rq0escxv nhd2j8a9 j83agx80 p7hjln8o kvgmc6g5 cxmmr5t8 oygrvhab hcukyx3x jb3vyjys rz4wbd8a qt6c0cv9 a8nywdso i1ao9s8h esuyzwwr f1sip0of lzcic4wl l9j0dhe7 abiwlrkh p8dawk7l bp9cbjyn s45kfl79 emlxlaya bkmhp75w spb7xbtv rt8b4zig n8ej3o3l agehan2d sk4xxmp2 taijpn5t tv7at329 thwo4zme");
                       //    console.log(followed1.innerHTML);
