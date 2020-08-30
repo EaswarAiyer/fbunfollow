@@ -1,3 +1,5 @@
+
+
 console.log("calling gotoProfile");
 var lastfollowedcount =0;
 var setintervalid=0;
@@ -7,11 +9,21 @@ var equalcountnewui =0;
 var setintervalidnewui =0;
 var tripleDot = document.getElementsByClassName("_2jq5 _p");
 console.log(tripleDot);
+
 if(tripleDot.length==0)
 {
 
   console.log("new UI")
-  var dropdown = document.getElementsByClassName("hu5pjgll lzf7d6o1 sp_LYAc5k-1MU4_2x sx_dde2ff")
+  //var dropdown = document.getElementsByClassName("hu5pjgll lzf7d6o1 sp_LYAc5k-1MU4_2x sx_dde2ff")
+  var dropdown = document.querySelectorAll('[aria-label="Account"]')
+  //console.log(progressvalue)
+//progressvalue = 75;
+//localStorage.setItem("progbarval",75)
+chrome.storage.sync.set({"progbarval": 5}, function() {
+  console.log('Value is set to 5');
+});
+
+
   console.log(dropdown);
   let i =0;
   dropdown[0].click()
@@ -25,6 +37,9 @@ if(tripleDot.length==0)
       var settingsStr = "Settings &amp; privacy";
       if(settingsmenu.innerHTML.toUpperCase() ==settingsStr.toUpperCase())
       {
+        chrome.storage.sync.set({"progbarval": 10}, function() {
+          console.log('Value is set to 10');
+        });
       console.log("inside settings and privacy")
       settingsmenu.click();
       console.log("clicked settings and privacy")
@@ -38,6 +53,9 @@ if(tripleDot.length==0)
            var newsFeedStr = "News Feed preferences";
            if(newsfeedmenu.innerHTML.toUpperCase() == newsFeedStr.toUpperCase())
            {
+            chrome.storage.sync.set({"progbarval": 15}, function() {
+              console.log('Value is set to 15');
+            });
            newsfeedmenu.click();
            console.log("clicked news feed preferences")
            setTimeout(()=>{
@@ -46,9 +64,12 @@ if(tripleDot.length==0)
              for(let unfollowbtnmenu of unfollowbtn)
              {
                console.log(unfollowbtnmenu.innerHTML)
-               unfollowStr = "Unfollow people, Pages and groups to hide their posts";
+               unfollowStr = "Unfollow people, pages, and groups to hide their posts";
                if(unfollowbtnmenu.innerHTML.toUpperCase() == unfollowStr.toUpperCase())
                {
+                chrome.storage.sync.set({"progbarval": 20}, function() {
+                  console.log('Value is set to 20');
+                });
                  //Unfollow people, pages, and groups to hide their posts
                  //Reconnect with people, pages, and groups you unfollowed.
                  
@@ -107,6 +128,12 @@ if(tripleDot.length==0)
                       equalcountnewui++
                       if(equalcountnewui==5){
                       console.log("Interval cleared........")
+                      chrome.storage.sync.set({"progbarval":60}, function() {
+                        console.log('Value is set to 60');
+                      });
+                      chrome.storage.sync.set({"progbartext":"Unfollowing..."}, function() {
+                        console.log('Value is set to unfollow');
+                      });
                       clearInterval(setintervalidnewui);
                       var x = 0; 
                       var time = 500; 
@@ -122,6 +149,9 @@ if(tripleDot.length==0)
                       console.log("followables length" + followablesnewui.length)
                       console.log("profile elements" +profileElements.length)
                       amol();
+                      chrome.storage.sync.set({"progbarval":100}, function() {
+                        console.log('Value is set to 100');
+                      });
                       //for (let followed1 of followablesnewui) {
                       //    let nameLabel = followed1.getElementsByClassName("oajrlxb2 oo1teu6h qu0x051f esr5mh6w e9989ue4 r7d6kgcz rq0escxv nhd2j8a9 j83agx80 p7hjln8o kvgmc6g5 cxmmr5t8 oygrvhab hcukyx3x jb3vyjys rz4wbd8a qt6c0cv9 a8nywdso i1ao9s8h esuyzwwr f1sip0of lzcic4wl l9j0dhe7 abiwlrkh p8dawk7l bp9cbjyn s45kfl79 emlxlaya bkmhp75w spb7xbtv rt8b4zig n8ej3o3l agehan2d sk4xxmp2 taijpn5t tv7at329 thwo4zme");
                       //    console.log(followed1.innerHTML);
@@ -156,7 +186,14 @@ if(tripleDot.length==0)
               // setTimeout(() => {
               //   scrollerNewUi("j83agx80 cbu4d94t buofh1pr");
               // }, 2000);
+              chrome.storage.sync.set({"progbarval":30}, function() {
+                console.log('Value is set to 30');
+              });
+              chrome.storage.sync.set({"progbartext":"scrolling followers..."}, function() {
+                console.log('Value is set to scroll');
+              });
               setintervalidnewui= setInterval(()=>{
+
                 console.log("Going to call scroller second time\n");
                 scrollerNewUi("j83agx80 cbu4d94t buofh1pr");
                 printFollowingnewui();
