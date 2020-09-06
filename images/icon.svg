@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="429" height="64" viewBox="0 0 429 64">
+  <g id="Group_4" data-name="Group 4" transform="translate(-405 -140)">
+    <g id="Group_1" data-name="Group 1" transform="translate(0 20)">
+      <g id="Group_2" data-name="Group 2">
+        <g id="Rectangle_1" data-name="Rectangle 1" transform="translate(405 120)" fill="#4267b2" stroke="#707070" stroke-width="1">
+          <rect width="219" height="64" stroke="none"/>
+          <rect x="0.5" y="0.5" width="218" height="63" fill="none"/>
+        </g>
+        <text id="SOCIAL" transform="translate(424 171)" fill="#fff" font-size="50" font-family="FredokaOne-Regular, Fredoka One"><tspan x="0" y="0">SOCIAL</tspan></text>
+      </g>
+    </g>
+    <g id="Group_3" data-name="Group 3" transform="translate(-253)">
+      <g id="Rectangle_1-2" data-name="Rectangle 1" transform="translate(868 140)" fill="#fff" stroke="#fff" stroke-width="1">
+        <rect width="219" height="64" stroke="none"/>
+        <rect x="0.5" y="0.5" width="218" height="63" fill="none"/>
+      </g>
+      <text id="DETOX" transform="translate(887 191)" fill="#4267b2" font-size="50" font-family="FredokaOne-Regular, Fredoka One"><tspan x="0" y="0">DETOX</tspan></text>
+    </g>
+  </g>
+</svg>
